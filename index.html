@@ -234,6 +234,35 @@ span.reason-tag:not(.comment-tag){background:#fee2e2;color:#991b1b;border:1px so
 </tr><tr style="background:#f4f2ec"><td colspan="2"><strong>Итого ожидаемых поступлений</strong></td><td class="sc" colspan="3"><strong>75 425 000 ₽</strong></td></tr></tbody></table></div><div style="margin-top:10px;font-size:11px;color:#72706a">Плановые данные взяты из полей CRM «Ожидаемая сумма платежа», «Срок оплаты», «Вероятность».</div>
   </section>
 
+
+  <!-- NEW DEALS DYNAMICS SECTION -->
+  <section class="block">
+    <div class="block-head"><h2>Динамика новых сделок</h2><span class="badge">обе воронки · по дате создания</span></div>
+    <div style="display:grid;grid-template-columns:250px 1fr 1fr;gap:14px;align-items:stretch">
+      <div style="background:#f0f6ff;border:1px solid #c5d1df;border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;justify-content:center">
+        <div style="font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:#3b5b8c;margin-bottom:8px">Новых сделок за 30 дней</div>
+        <div style="display:flex;align-items:baseline;gap:10px">
+          <div style="font-family:'Cabinet Grotesk',sans-serif;font-size:42px;line-height:1;color:#1e3a5f;font-weight:700">32</div>
+          <span style="background:#dcfce7;color:#166534;border:1px solid #bbf7d0;border-radius:999px;font-size:12px;font-weight:700;padding:3px 9px">▲ +28%</span>
+        </div>
+        <div style="font-size:14px;font-weight:700;color:#1e3a5f;margin-top:8px">592 022 655 ₽</div>
+        <div style="font-size:11px;color:#72706a;margin-top:6px">против 25 сделок за предыдущие 30 дней</div>
+        <div style="display:flex;gap:12px;margin-top:12px;font-size:11px">
+          <span><span style="display:inline-block;width:9px;height:9px;border-radius:2px;background:#2563eb;margin-right:5px"></span>ТС — 24</span>
+          <span><span style="display:inline-block;width:9px;height:9px;border-radius:2px;background:#059669;margin-right:5px"></span>Армадон — 8</span>
+        </div>
+      </div>
+      <div style="background:#fff;border:1px solid #d9d5cc;border-radius:12px;padding:14px 16px 10px">
+        <div style="font-size:12px;font-weight:700;margin-bottom:8px">Неделя к неделе <span style="font-weight:500;color:#72706a">· 12 недель · линия — среднее за 4 нед.</span></div>
+        <div style="height:210px"><canvas id="dynWeekly"></canvas></div>
+      </div>
+      <div style="background:#fff;border:1px solid #d9d5cc;border-radius:12px;padding:14px 16px 10px">
+        <div style="font-size:12px;font-weight:700;margin-bottom:8px">Месяц к месяцу <span style="font-weight:500;color:#72706a">· 6 месяцев</span></div>
+        <div style="height:210px"><canvas id="dynMonthly"></canvas></div>
+      </div>
+    </div>
+  </section>
+
   <section class="block">
     <div class="block-head"><h2>Эффективность источников лидов</h2><span class="badge">обе воронки · активные сделки</span></div>
     <div class="source-tile"><div class="src-row" style="grid-template-columns:220px 1fr;background:#fffbeb;border-color:#fcd34d"><div class="src-info"><span class="src-name">Звонок</span><span class="src-cnt">26 сд.</span></div><div class="src-bar-wrap"><div class="src-bar" style="width:100%;background:linear-gradient(90deg,#f59e0b,#10b981)"></div></div></div><div class="src-row" style="grid-template-columns:220px 1fr;background:#fef7da;border-color:#fcd34d"><div class="src-info"><span class="src-name">25</span><span class="src-cnt">8 сд.</span></div><div class="src-bar-wrap"><div class="src-bar" style="width:31%;background:linear-gradient(90deg,#f59e0b,#10b981)"></div></div></div><div class="src-row" style="grid-template-columns:220px 1fr;background:#fef4ca;border-color:#fcd34d"><div class="src-info"><span class="src-name">26</span><span class="src-cnt">8 сд.</span></div><div class="src-bar-wrap"><div class="src-bar" style="width:31%;background:linear-gradient(90deg,#f59e0b,#10b981)"></div></div></div><div class="src-row" style="grid-template-columns:220px 1fr;background:#fef0ba;border-color:#fcd34d"><div class="src-info"><span class="src-name">Выставка</span><span class="src-cnt">1 сд.</span></div><div class="src-bar-wrap"><div class="src-bar" style="width:4%;background:linear-gradient(90deg,#f59e0b,#10b981)"></div></div></div><div class="src-row" style="grid-template-columns:220px 1fr;background:#fdedaa;border-color:#fcd34d"><div class="src-info"><span class="src-name">Avito - Продажа ТС</span><span class="src-cnt">1 сд.</span></div><div class="src-bar-wrap"><div class="src-bar" style="width:4%;background:linear-gradient(90deg,#f59e0b,#10b981)"></div></div></div><div class="src-row" style="grid-template-columns:220px 1fr;background:#fde99a;border-color:#fcd34d"><div class="src-info"><span class="src-name">Агенты</span><span class="src-cnt">1 сд.</span></div><div class="src-bar-wrap"><div class="src-bar" style="width:4%;background:linear-gradient(90deg,#f59e0b,#10b981)"></div></div></div><div class="src-row" style="grid-template-columns:220px 1fr;background:#fde68a;border-color:#fcd34d"><div class="src-info"><span class="src-name">PARTNER</span><span class="src-cnt">1 сд.</span></div><div class="src-bar-wrap"><div class="src-bar" style="width:4%;background:linear-gradient(90deg,#f59e0b,#10b981)"></div></div></div></div>
@@ -361,6 +390,55 @@ document.querySelectorAll('table').forEach(tbl=>{
     th.style.color='#2563eb';
   }));
 });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  var WK = {"labels": ["20.04–26.04", "27.04–03.05", "04.05–10.05", "11.05–17.05", "18.05–24.05", "25.05–31.05", "01.06–07.06", "08.06–14.06", "15.06–21.06", "22.06–28.06", "29.06–05.07", "06.07–12.07"], "ts_n": [3, 0, 5, 0, 0, 7, 5, 7, 3, 4, 8, 5], "arm_n": [10, 1, 3, 0, 5, 2, 3, 0, 0, 6, 2, 0], "ts_s": [8770000, 0, 13263000, 0, 0, 64870000, 80650000, 75700000, 41750000, 26700000, 187000000, 59300000], "arm_s": [0, 0, 11850000, 0, 0, 0, 19400000, 0, 0, 94830655, 106742000, 0], "sum": [8770000, 0, 25113000, 0, 0, 64870000, 100050000, 75700000, 41750000, 121530655, 293742000, 59300000], "ma": [13.0, 7.0, 7.33, 5.5, 3.5, 5.5, 5.5, 7.25, 6.75, 7.0, 7.5, 7.0]}, MO = {"labels": ["Февраль", "Март", "Апрель", "Май", "Июнь", "Июль"], "ts_n": [10, 14, 11, 12, 23, 9], "arm_n": [5, 11, 16, 10, 10, 1], "ts_s": [35479000, 36167000, 24380000, 78133000, 356700000, 114400000], "arm_s": [103430500, 62927000, 29818666, 11850000, 220972655, 0], "sum": [138909500, 99094000, 54198666, 89983000, 577672655, 114400000]};
+  function mln(v){ if(!v) return '0'; return (v/1e6).toFixed(1).replace('.',',').replace(',0','')+' млн'; }
+  function rub(v){ if(!v) return '0 ₽'; return v.toString().replace(/\B(?=(\d{3})+(?!\d))/g,' ')+' ₽'; }
+  Chart.defaults.font.family = "'Satoshi',sans-serif";
+  Chart.defaults.font.size = 10;
+  function stacked(id, D, rot, showSum){
+    new Chart(document.getElementById(id), {
+      data: {
+        labels: D.labels,
+        datasets: [
+          {type:'bar', label:'Продажа ТС', data:D.ts_n, backgroundColor:'#2563eb', stack:'s', borderRadius:3, order:2},
+          {type:'bar', label:'Армадон', data:D.arm_n, backgroundColor:'#059669', stack:'s', borderRadius:3, order:2},
+          D.ma ? {type:'line', label:'Среднее за 4 нед.', data:D.ma, borderColor:'#f59e0b', borderWidth:2, pointRadius:0, tension:.35, order:1} : null
+        ].filter(Boolean)
+      },
+      options: {
+        maintainAspectRatio:false, responsive:true,
+        interaction:{mode:'index', intersect:false},
+        plugins:{
+          legend:{display:false},
+          tooltip:{callbacks:{
+            label:function(c){
+              if(c.dataset.type==='line') return 'Среднее за 4 нед.: '+c.parsed.y;
+              var s = c.datasetIndex===0 ? D.ts_s[c.dataIndex] : D.arm_s[c.dataIndex];
+              return c.dataset.label+': '+c.parsed.y+' сд. · '+rub(s);
+            },
+            footer:function(items){
+              var i = items[0].dataIndex;
+              return 'Итого: '+(D.ts_n[i]+D.arm_n[i])+' сд. · '+rub(D.sum[i]);
+            }
+          }}
+        },
+        scales:{
+          x:{stacked:true, grid:{display:false},
+             ticks:{maxRotation:rot, minRotation:rot, autoSkip:false,
+               callback:function(v,i){ return showSum ? [this.getLabelForValue(v), mln(D.sum[i])] : this.getLabelForValue(v); }}},
+          y:{stacked:true, beginAtZero:true, ticks:{precision:0}, grid:{color:'#e9e5dd'}}
+        }
+      }
+    });
+  }
+  stacked('dynWeekly', WK, 40, false);
+  stacked('dynMonthly', MO, 0, true);
+})();
 </script>
 </body>
 </html>
