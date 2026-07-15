@@ -61,7 +61,7 @@ h3{font-family:var(--disp);font-size:15px;letter-spacing:-.01em;margin-bottom:12
 .src-bar{height:100%;border-radius:4px}
 .src-sum{text-align:right;font-weight:700;white-space:nowrap;font-size:13px}
 .funnel-tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.funnel-tile{border-radius:14px;border:1px solid;padding:20px 22px;cursor:pointer;text-decoration:none;display:block;transition:transform .18s,box-shadow .18s;position:relative;overflow:hidden}
+.funnel-tile{border-radius:14px;border:1px solid;padding:20px 22px;cursor:pointer;text-decoration:none;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s;position:relative;overflow:hidden}
 .funnel-tile:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.12)}
 .funnel-tile.ts{background:linear-gradient(135deg,#dbeafe 0%,#eff6ff 100%);border-color:#bfdbfe}
 .funnel-tile.arm{background:linear-gradient(135deg,#d1fae5 0%,#ecfdf5 100%);border-color:#a7f3d0}
@@ -72,7 +72,7 @@ h3{font-family:var(--disp);font-size:15px;letter-spacing:-.01em;margin-bottom:12
 .ft-breakdown{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
 .fb-row{display:flex;align-items:center;justify-content:space-between;font-size:11px;padding:3px 0;border-bottom:1px solid rgba(0,0,0,.05)}
 .fb-stage{color:#4a4640}.fb-cnt{font-weight:700}
-.ft-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:8px;font-size:12px;font-weight:700;border:none;cursor:pointer;font-family:var(--font)}
+.ft-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:8px;font-size:12px;font-weight:700;border:none;cursor:pointer;font-family:var(--font);margin-top:auto;align-self:flex-start}
 .ts .ft-btn{background:#2563eb;color:#fff}.arm .ft-btn{background:#059669;color:#fff}
 .ft-arrow{font-size:40px;position:absolute;right:20px;top:20px;opacity:.2}
 .ch-grid{display:flex;flex-direction:column;gap:8px}
@@ -151,9 +151,9 @@ span.reason-tag:not(.comment-tag){background:#fee2e2;color:#991b1b;border:1px so
   h1{font-size:22px}.ft-n{font-size:32px}table{min-width:900px}
 }
 
-.hero-card.svc{background:#e6fbf8;border-color:#a7ede1}
-.funnel-tile.svc{background:linear-gradient(135deg,#99f6e4 0%,#f0fdfa 100%);border-color:#5eead4}
-.svc .ft-btn{background:#0d9488;color:#fff}
+.hero-card.svc{background:#fffbeb;border-color:#fde68a}
+.funnel-tile.svc{background:linear-gradient(135deg,#fde68a 0%,#fffbeb 100%);border-color:#fcd34d}
+.svc .ft-btn{background:#d97706;color:#fff}
 .tab-btn.active.svc-tab{border-bottom-color:#0d9488}
 .svc-stage-1{background:#f0fdfa}.svc-stage-2{background:#ccfbf1}.svc-stage-3{background:#99f6e4}
 .ph-badge.svc{background:#ccfbf1;color:#0f766e}
@@ -195,7 +195,7 @@ span.reason-tag:not(.comment-tag){background:#fee2e2;color:#991b1b;border:1px so
       </a>
       <a class="hero-card svc" onclick="switchTabByName('svc')" href="javascript:void(0)">
         <div class="hc-label">Активные сделки — Привлечение на сервис</div>
-        <div class="hc-row"><div><div class="hc-n">9</div><div class="hc-s" style="color:#0f766e">лиды на возврат</div></div><span class="hc-arrow">→</span></div>
+        <div class="hc-row"><div><div class="hc-n">9</div><div class="hc-s" style="color:#92400e">лиды на возврат</div></div><span class="hc-arrow">→</span></div>
         <div class="hc-tag">🟠 Нажмите, чтобы открыть таблицу сделок</div>
       </a>
     </div>
@@ -203,7 +203,7 @@ span.reason-tag:not(.comment-tag){background:#fee2e2;color:#991b1b;border:1px so
   <section class="block"><div class="block-head"><h2>Воронка «Продажа ТС»</h2></div><div class="kpis" style="grid-template-columns:repeat(7,1fr)"><div class="metric" style="background:#e0eefe;border-color:#c5d1df"><div class="metric-label">Провести переговоры</div><div class="metric-value">2</div><div class="metric-sub">0 ₽</div></div><div class="metric" style="background:#d5e8fe;border-color:#bbccdf"><div class="metric-label">Утвердить КП</div><div class="metric-value">10</div><div class="metric-sub">290 800 000 ₽</div></div><div class="metric" style="background:#cae2fe;border-color:#b1c6df"><div class="metric-label">Подписать договор</div><div class="metric-value">2</div><div class="metric-sub">38 263 000 ₽</div></div><div class="metric" style="background:#bfdcfe;border-color:#a8c1df"><div class="metric-label">Получить оплату счета</div><div class="metric-value">3</div><div class="metric-sub">80 270 000 ₽</div></div><div class="metric" style="background:#b4d6fd;border-color:#9ebcde"><div class="metric-label">Отгрузить ТС</div><div class="metric-value">1</div><div class="metric-sub">16 700 000 ₽</div></div><div class="metric" style="background:#dcfce7;border-color:#bbf7d0"><div class="metric-label">Успешно закрыто за месяц</div><div class="metric-value">3</div><div class="metric-sub">25 200 000 ₽</div></div><div class="metric" style="background:#fee2e2;border-color:#fecaca"><div class="metric-label">Проиграно за месяц</div><div class="metric-value">10</div><div class="metric-sub">82 200 000 ₽</div></div></div></section>
   <section class="block"><div class="block-head"><h2>Воронка «Армадон»</h2></div><div class="kpis" style="grid-template-columns:repeat(7,1fr)"><div class="metric" style="background:#daf9ec;border-color:#bfdbcf"><div class="metric-label">Подготовить КП</div><div class="metric-value">19</div><div class="metric-sub">28 310 000 ₽</div></div><div class="metric" style="background:#c8f6e3;border-color:#b0d8c7"><div class="metric-label">Отработка возражений</div><div class="metric-value">1</div><div class="metric-sub">0 ₽</div></div><div class="metric" style="background:#b6f3da;border-color:#a0d5bf"><div class="metric-label">Утвердить КП</div><div class="metric-value">4</div><div class="metric-sub">5 277 000 ₽</div></div><div class="metric" style="background:#a4f0d1;border-color:#90d3b7"><div class="metric-label">Подписать договор</div><div class="metric-value">2</div><div class="metric-sub">16 727 075 ₽</div></div><div class="metric" style="background:#80eabf;border-color:#70cda8"><div class="metric-label">Производство</div><div class="metric-value">1</div><div class="metric-sub">11 850 000 ₽</div></div><div class="metric" style="background:#dcfce7;border-color:#bbf7d0"><div class="metric-label">Успешно закрыто за месяц</div><div class="metric-value">0</div><div class="metric-sub">0 ₽</div></div><div class="metric" style="background:#fee2e2;border-color:#fecaca"><div class="metric-label">Проиграно за месяц</div><div class="metric-value">5</div><div class="metric-sub">119 362 000 ₽</div></div></div></section>
 
-  <section class="block"><div class="block-head"><h2>Воронка «Привлечение на сервис»</h2><span class="badge">только количество сделок, без сумм</span></div><div class="kpis" style="grid-template-columns:repeat(3,1fr)"><div class="metric" style="background:#f0fdfa;border-color:#a7ede1"><div class="metric-label">Диагностика причин ухода</div><div class="metric-value">1</div></div><div class="metric" style="background:#ccfbf1;border-color:#7fe0d2"><div class="metric-label">Проведение переговоров</div><div class="metric-value">3</div></div><div class="metric" style="background:#99f6e4;border-color:#5eead4"><div class="metric-label">Ожидаем посещения</div><div class="metric-value">5</div></div></div></section>
+  <section class="block"><div class="block-head"><h2>Воронка «Привлечение на сервис»</h2><span class="badge">этапы — только количество, без сумм</span></div><div class="kpis" style="grid-template-columns:repeat(5,1fr)"><div class="metric" style="background:#f0fdfa;border-color:#a7ede1"><div class="metric-label">Диагностика причин ухода</div><div class="metric-value">1</div></div><div class="metric" style="background:#ccfbf1;border-color:#7fe0d2"><div class="metric-label">Проведение переговоров</div><div class="metric-value">3</div></div><div class="metric" style="background:#99f6e4;border-color:#5eead4"><div class="metric-label">Ожидаем посещения</div><div class="metric-value">5</div></div><div class="metric" style="background:#dcfce7;border-color:#bbf7d0"><div class="metric-label">Успешно привлечено за месяц</div><div class="metric-value">6</div><div class="metric-sub">0 ₽</div></div><div class="metric" style="background:#fee2e2;border-color:#fecaca"><div class="metric-label">Проиграно за месяц</div><div class="metric-value">16</div><div class="metric-sub">0 ₽</div></div></div></section>
   <!-- PAYMENTS SECTION -->
   <section class="block pay-section">
     <div class="block-head"><h2>💳 Планируемые поступления</h2><span class="badge">июль 2026 · 5 сделки</span></div>
@@ -285,7 +285,7 @@ span.reason-tag:not(.comment-tag){background:#fee2e2;color:#991b1b;border:1px so
     <a class="funnel-tile svc" onclick="switchTabByName('svc')" href="javascript:void(0)">
       <span class="ft-arrow">⇒</span>
       <div class="ft-label">Привлечение на сервис — активные лиды</div>
-      <div class="ft-main"><div class="ft-n">9</div><div class="ft-right"><div class="ft-sum" style="color:#0f766e">без денежной суммы</div><div class="ft-sub">в работе</div></div></div>
+      <div class="ft-main"><div class="ft-n">9</div><div class="ft-right"><div class="ft-sum" style="color:#92400e">Компаний</div><div class="ft-sub">в работе</div></div></div>
       <div class="ft-breakdown"><span class="fb-row"><span class="fb-stage">Диагностика причин ухода</span><span class="fb-cnt">1</span></span><span class="fb-row"><span class="fb-stage">Проведение переговоров</span><span class="fb-cnt">3</span></span><span class="fb-row"><span class="fb-stage">Ожидаем посещения</span><span class="fb-cnt">5</span></span></div>
       <button class="ft-btn">Открыть таблицу →</button>
     </a>
